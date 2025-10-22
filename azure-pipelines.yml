@@ -10,9 +10,9 @@ parameters:
         - name: appName
           displayName: App Service Name
           type: string
-          default: 'App Service'
+          default: 'adrianroma.terraform'
           values:
-                  - 'App Service'
+                  - 'adrianroma.terraform'
 
 
 trigger:
