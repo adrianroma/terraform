@@ -21,7 +21,7 @@ variables:
   environmentName: 'Development' # Sample Name
 
   # Function app name
-  functionAppName: ''
+  functionAppName: 'Terraform'
 
   # Agent VM image name
   vmImageName: 'windows-latest'
