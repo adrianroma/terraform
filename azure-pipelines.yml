@@ -82,5 +82,5 @@ stages:
             inputs:
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
-              appName: $(appName)
+              appName: 'adrianroma.terraform'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
