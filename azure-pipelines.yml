@@ -7,6 +7,9 @@ parameters:
                   - Development
                   - Test
                   - Production
+        - name: appName
+          displayName: App Service Name
+          type: string
 
 
 trigger:
@@ -82,7 +85,7 @@ stages:
           - task: AzureFunctionApp@2
             displayName: 'Azure functions app deploy'
             inputs:
-              appName: ''
+              appName:  ${{ parameters.appName }}
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
