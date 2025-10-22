@@ -1,13 +1,8 @@
-# PowerShell Function App to Windows on Azure
-# Build a PowerShell Function App and deploy it to Azure as a Windows function app.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-powershell
-
 
 parameters:
         - name: environmentName
           type: string
-          default: 'Development' # Example: Provide a default value
+          default: 'Development' 
           values:
                   - Development
                   - Test
