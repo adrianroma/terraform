@@ -7,11 +7,7 @@ parameters:
                   - Development
                   - Test
                   - Production
-        - name: appName
-          type: string
-          default: 'adrianroma.terraform'
-          values:
-                  - adrianroma.terraform
+
 
 trigger:
 - main
@@ -22,7 +18,7 @@ variables:
 
   webAppName: 'Terraform Auto'
 
-  appName : 'adrianroma.terraform'
+
 
   environmentName: 'Development' # Sample Name
 
@@ -57,7 +53,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
-        appName : $(appName)
+        appName : $(myAppNameVariable)
         rootFolderOrFile: $(workingDirectory)
         includeRootFolder: false
         archiveType: zip
@@ -87,7 +83,7 @@ stages:
           - task: AzureFunctionApp@2
             displayName: 'Azure functions app deploy'
             inputs:
-              appName: appName
+              appName: '$(myAppNameVariable)'
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
