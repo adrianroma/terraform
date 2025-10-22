@@ -22,6 +22,8 @@ variables:
 
   webAppName: 'Terraform Auto'
 
+  appName : 'adrianroma.terraform'
+
   environmentName: 'Development' # Sample Name
 
   # Function app name
@@ -55,6 +57,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
+        appName : $(appName)
         rootFolderOrFile: $(workingDirectory)
         includeRootFolder: false
         archiveType: zip
