@@ -7,12 +7,12 @@ parameters:
                   - Development
                   - Test
                   - Production
-         - name: appName
-           type: string
-           default: 'Terraform'
-           values:
-                    - Terraform
-                    - PowerShell
+        - name: appName
+          type: string
+          default: 'Terraform'
+          values:
+                  - Terraform
+                  - PowerShell
 
 trigger:
 - main
