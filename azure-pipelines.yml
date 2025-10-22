@@ -8,6 +8,10 @@ parameters:
         - name: environmentName
           type: string
           default: 'Development' # Example: Provide a default value
+          values:
+                  - Development
+                  - Test
+                  - Production
 
 trigger:
 - main
