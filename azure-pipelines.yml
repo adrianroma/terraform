@@ -10,6 +10,9 @@ parameters:
         - name: appName
           displayName: App Service Name
           type: string
+          default: 'App Service'
+          values:
+                  - 'App Service'
 
 
 trigger:
