@@ -50,7 +50,7 @@ stages:
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
-        appName: 'adrianroma.terraform'
+        appName: ''
         rootFolderOrFile: $(workingDirectory)
         includeRootFolder: false
         archiveType: zip
@@ -82,5 +82,5 @@ stages:
             inputs:
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
-              appName: 'adrianroma.terraform'
+              appName: '$(webAppName)'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
