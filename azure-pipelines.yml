@@ -16,7 +16,7 @@ variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '0d817d48-1881-4e2e-9075-25b55ad2b59e'
 
-  webAppName: 'Terraform Auto'
+  webAppName: 'adrianroma.terraform'
 
 
 
@@ -83,7 +83,7 @@ stages:
           - task: AzureFunctionApp@2
             displayName: 'Azure functions app deploy'
             inputs:
-              appName: '$(myAppNameVariable)'
+              appName: ''
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
