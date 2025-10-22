@@ -9,10 +9,9 @@ parameters:
                   - Production
         - name: appName
           type: string
-          default: 'Terraform'
+          default: 'adrian.terraform'
           values:
-                  - Terraform
-                  - PowerShell
+                  - adrian.terraform
 
 trigger:
 - main
