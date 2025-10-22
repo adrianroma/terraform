@@ -20,8 +20,6 @@ variables:
 
   environmentName: 'Development' # Sample Name
 
-  
-
   # Function app name
   functionAppName: ''
 
