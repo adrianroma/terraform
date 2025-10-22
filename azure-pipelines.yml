@@ -10,7 +10,7 @@ variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '0d817d48-1881-4e2e-9075-25b55ad2b59e'
 
-  environmentName: 'Sample Terraform' # Sample Name
+  environmentName: 'Development' # Sample Name
 
   # Function app name
   functionAppName: ''
@@ -20,6 +20,11 @@ variables:
 
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)'
+
+ parameters:
+        - name: environmentName
+          type: string
+          default: 'Development' # Example: Provide a default value
 
 stages:
 - stage: Build
