@@ -7,6 +7,12 @@ parameters:
                   - Development
                   - Test
                   - Production
+         - name: appName
+           type: string
+           default: 'Terraform'
+           values:
+                    - Terraform
+                    - PowerShell
 
 trigger:
 - main
@@ -82,5 +88,5 @@ stages:
             inputs:
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
-              appName: '$(webAppName)'
+              appName: '$(appName)'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
