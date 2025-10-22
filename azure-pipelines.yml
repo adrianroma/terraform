@@ -3,6 +3,12 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-powershell
 
+
+parameters:
+        - name: environmentName
+          type: string
+          default: 'Development' # Example: Provide a default value
+
 trigger:
 - main
 
@@ -21,10 +27,7 @@ variables:
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)'
 
-parameters:
-        - name: environmentName
-          type: string
-          default: 'Development' # Example: Provide a default value
+
 
 stages:
 - stage: Build
