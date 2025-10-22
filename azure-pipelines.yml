@@ -21,7 +21,7 @@ variables:
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)'
 
-  parameters:
+parameters:
         - name: environmentName
           type: string
           default: 'Development' # Example: Provide a default value
