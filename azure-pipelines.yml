@@ -9,9 +9,9 @@ parameters:
                   - Production
         - name: appName
           type: string
-          default: 'adrian.terraform'
+          default: 'adrianroma.terraform'
           values:
-                  - adrian.terraform
+                  - adrianroma.terraform
 
 trigger:
 - main
