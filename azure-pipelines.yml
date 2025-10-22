@@ -16,7 +16,11 @@ variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '0d817d48-1881-4e2e-9075-25b55ad2b59e'
 
+  webAppName: 'Terraform Auto'
+
   environmentName: 'Development' # Sample Name
+
+  
 
   # Function app name
   functionAppName: ''
