@@ -88,5 +88,4 @@ stages:
             inputs:
               connectedServiceNameARM: '$(azureSubscription)'
               appType: functionApp
-              appName: $(appName)
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
